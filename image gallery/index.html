@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Created by Sunil Sharma -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive image gallery with lightbox and search functionality">
+    <meta name="theme-color" content="#3498db">
+    <meta name="author" content="Sunil Sharma">
+    <title>Interactive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>𝕀𝕞𝕒𝕘𝕖 𝔾𝕒𝕝𝕝𝕖𝕣𝕪</h1>
+            <div class="theme-toggle">
+                <button id="themeToggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <div class="search-container">
+                <label for="searchInput" class="sr-only">Search images</label>
+                <input type="text" id="searchInput" placeholder="Search images..." aria-label="Search images">
+            </div>
+        </header>
+
+        <main>
+            <div class="gallery" id="gallery" role="list">
+                <!-- Images will be dynamically loaded here -->
+            </div>
+        </main>
+
+        <footer class="credit">
+            Created with ❤️ by <a href="#" target="_blank" rel="noopener">Sunil Sharma</a>
+        </footer>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-hidden="true">
+        <span class="close-btn" role="button" aria-label="Close lightbox">&times;</span>
+        <button class="nav-btn prev-btn" aria-label="Previous image">&lt;</button>
+        <button class="nav-btn next-btn" aria-label="Next image">&gt;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
